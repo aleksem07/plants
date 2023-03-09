@@ -1,0 +1,23 @@
+section.prices#price
+  .prices__container
+    h2.prices__title Prices
+    ul.prices__tariff.tariff.tariff__list
+      li.tariff__item.tariff__item--basics
+        button.tarif__button Basics
+        .dropdown-status
+      li.tariff__item.tariff__item--standart
+        button.tarif__button Standard
+        .dropdown-status
+      li.tariff__item.tariff__item--pro-care
+        button.tarif__button Pro care
+        .dropdown-status
+    .prices__contact
+      h2.prices__contact-title Our best #[span gardeners] are ready to help you
+      button.prices__contact-button.button(type='button' onclick="window.location.href='#contacts'") Contact us
+      .prices__contact-img
+
+template#priceTemplate
+  .tariff__item-description
+    p.tariff__item-title Release of Letraset sheets containing Lorem Ipsum passages, and more recently
+    .tariff__item-price #[span $15] / per hour
+    button.tariff__item-button(type='button' onclick="window.location.href='#contacts'") Order

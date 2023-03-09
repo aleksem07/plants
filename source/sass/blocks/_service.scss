@@ -1,0 +1,140 @@
+.service {
+  margin-bottom: 44px;
+  padding-bottom: 122px;
+  background-color: $bg-section;
+
+  @media (max-width: $desktop-width) {
+    margin-bottom: 39px;
+    padding-bottom: 59px;
+  }
+
+  @media (max-width: ($tablet-width - 0.1)) {
+    margin-bottom: 25px;
+    padding-bottom: 27px;
+  }
+}
+
+.service__header-box {
+  margin-bottom: 80px;
+  display: flex;
+
+  @media (max-width: $desktop-width) {
+    margin-bottom: 37px;
+    flex-direction: column;
+  }
+}
+
+.service__title {
+  margin-right: 160px;
+  padding-top: 39px;
+
+  @media (max-width: $desktop-width) {
+    margin-right: 0;
+    padding-top: 62px;
+    font-size: 2.1875rem;
+    line-height: 45.6px;
+  }
+
+  @media (max-width: ($tablet-width - 0.1)) {
+    padding-top: 28px;
+    font-size: 1.5625rem;
+    line-height: 32.5px;
+  }
+}
+
+.service__button-box {
+  margin-top: 45px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 38px;
+  align-self: center;
+
+  @media (max-width: $desktop-width) {
+      align-self: start;
+      column-gap: 40px;
+      row-gap: 10px;
+  }
+
+  @media (max-width: ($tablet-width - 0.1)) {
+    margin-top: 40px;
+    column-gap: 14px;
+    row-gap: 5.5px;
+  }
+}
+
+.service__card-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 117px;
+  row-gap: 59px;
+
+  @media (max-width: $desktop-width) {
+    column-gap: 90px;
+    row-gap: 23px;
+  }
+
+  @media (max-width: ($tablet-width - 0.1)) {
+    display: grid;
+    justify-items: center;
+    row-gap: 31px;
+  }
+}
+
+.service__card-item {
+  padding-bottom: 17px;
+  flex: 0 0 329px;
+  box-sizing: border-box;
+
+  border: 1px solid $border_card;
+  border-radius: 20px;
+
+  @media (max-width: $desktop-width) {
+    flex: 0 0 289px
+  }
+
+  @media (max-width: ($tablet-width - 0.1)) {
+    width: 279px;
+  }
+}
+
+.card-item__img {
+  margin-bottom: 5px;
+  border-radius: 20px 20px 0 0;
+
+  @media (max-width: $desktop-width) {
+    width: 100%;
+    height: 350px;
+  }
+}
+
+.card-item__title {
+  color: $basic_orange;
+
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.card-item__text {
+  text-align: center;
+  margin-bottom: 14px;
+
+  @media (max-width: $desktop-width) {
+    margin-top: 10px;
+    padding-inline: 35px;
+  }
+
+  @media (max-width: ($tablet-width - 0.1)) {
+    margin-bottom: 5px;
+  }
+}
+
+button.service__button--active {
+  color: $basic_white;
+  background-color: $basic_orange;
+}
+
+.service__button--blur {
+  filter: blur(2.5px);
+}

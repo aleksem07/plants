@@ -1,0 +1,23 @@
+mixin site-nav(title, href)
+  li.menu-nav__item.menu-site__item
+    if href
+      a.menu-nav__link.menu-site__link(href=href rel="noopener noreferrer") #{title}
+    else
+      a.menu-nav__link.menu-site__link.menu-site__link--active #{title}
+
+header.header
+  .header__container
+    include logo
+
+    nav.header__menu.menu-nav
+      ul.menu-nav__list.menu-site#menu-nav__list
+        +site-nav('Home')
+        +site-nav('About us', '#about')
+        +site-nav('Service', '#service')
+        +site-nav('Price', '#price')
+        +site-nav('Contacts', '#contacts')
+
+    button.button-nav.button-nav--closed(type='button')
+      span.visually-hidden Переключить меню
+
+

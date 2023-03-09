@@ -1,0 +1,15 @@
+.logo__img {
+  margin-bottom: 10px;
+  width: 79px;
+  height: 21px;
+}
+
+.header__menu {
+  margin-left: auto;
+}
+
+.header__logo {
+  @media (max-width: $tablet-width) {
+    grid-column: 1 / 2;
+  }
+}

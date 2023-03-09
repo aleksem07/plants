@@ -1,0 +1,14 @@
+extends layout/layout
+
+block variables
+  - var title = 'Главная страница'
+  - var pageClass = "index-page"
+
+block content
+  main(class= pageClass)
+    h1.visually-hidden Plants
+    include ./modules/welcome
+    include ./modules/about
+    include ./modules/service
+    include ./modules/prices
+    include ./modules/contacts

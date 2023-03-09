@@ -1,0 +1,40 @@
+/* header */
+
+.header {
+  margin-inline: auto;
+  padding-bottom: 60px;
+
+  min-width: $min-width;
+  width: 100%;
+  max-width: $desktop-width;
+
+  position: relative;
+
+  background-color: $bg_section;
+
+  @media (max-width: $desktop-width) {
+    padding-bottom: 30px;
+  }
+
+  @media (max-width: ($tablet-width - 0.1)) {
+    padding-bottom: 0;
+  }
+}
+
+.header__container {
+  min-height: 134px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  @media (max-width: $desktop-width) {
+    margin-top: -7px;
+  }
+
+  @media (max-width: ($tablet-width - 0.1)) {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 75px auto;
+    align-items: end;
+  }
+}

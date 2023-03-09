@@ -1,0 +1,27 @@
+mixin service-card(img, srcset, title, classname, alt='care')
+  li.service__card-item.card-item(class=classname)
+    picture
+      source(media="(min-width: 1441px)", srcset=`./img/service/${img}`)
+      source(media="(min-width: 320px)", srcset=`./img/service/${srcset}`)
+      img.card-item__img(src=`./img/service/${img}` alt=alt)
+    h3.card-item__title #{title}
+    p.card-item__text Lorem Ipsum has been the industry
+
+section.service#service
+  .service__container
+    .service__header-box
+      h2.title.service__title Service and our #[br]projects
+      ul.service__button-box
+        li
+          button.service__button.button.button--gardens Gardens
+        li
+          button.service__button.button.button--lawn Lawn
+        li
+          button.service__button.button.button--planting Planting
+    ul.service__card-list
+      +service-card('Garden_care.webp', 'Garden_care-t.webp', 'Garden care', 'gardens')
+      +service-card('Planting.webp', 'Planting-t.webp', 'Planting', 'planting')
+      +service-card('Lawn_care.webp', 'Lawn_care-t.webp', 'Lawn care', 'lawn')
+      +service-card('Planting-2.webp', 'Planting-2-t.webp', 'Planting', 'planting')
+      +service-card('Garden_care-2.webp', 'Garden_care-2-t.webp', 'Garden care', 'gardens')
+      +service-card('Planting-3.webp', 'Planting-3-t.webp', 'Planting', 'planting')

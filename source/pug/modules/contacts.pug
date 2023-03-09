@@ -1,0 +1,31 @@
+mixin city(city, prfx, phone, adress)
+  h3 City
+  p #{city}, #{prfx}
+  a.contacts__city-show-phone(href=`tel:${phone}`)
+    h3 Phone
+    p #{phone}
+  h3 Office adress:
+  p #{adress}
+  button.button__city.button(type='button' onclick=`window.location.href='tel:${phone}'`) Call us
+
+section.contacts#contacts
+  .contacts__container
+    h2.contacts__title Contact us
+    .dropdown__box
+      button.contacts__dropdown #[span.dropdown__text City]
+        .dropdown-status
+        ul.contacts__city-list
+          li.contacts__city-item.city.city--el1 #[span.dropdown__text Canandaigua, NY]
+          li.contacts__city-item.city.city--el2 #[span.dropdown__text New York City]
+          li.contacts__city-item.city.city--el3 #[span.dropdown__text Yonkers, NY]
+          li.contacts__city-item.city.city--el4 #[span.dropdown__text Sherrill, NY]
+      .contacts__box
+        .contacts__city-show.show-canandaigua
+          +city('Canandaigua', 'NY', '+1	585	393 0001', '151 Charlotte Street')
+        .contacts__city-show.show-newYork
+          +city('New York', 'City', '+1	585	393 0001', '9 East 91st Street')
+        .contacts__city-show.show-yonkers
+          +city('Yonkers', 'NY', '+1	914	678 0003', '511 Warburton Ave')
+        .contacts__city-show.show-sherrill
+          +city('Sherrill', 'NY', '+1	585	393 0001', '14 WEST Noyes BLVD')
+    .contacts__img

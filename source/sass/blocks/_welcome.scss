@@ -1,0 +1,100 @@
+.welcome {
+  margin-bottom: 93px;
+  padding-bottom: 89px;
+
+  width: 100%;
+
+  background-color: $bg_section;
+
+  @media (max-width: $desktop-width) {
+    margin-bottom: 0;
+    padding-bottom: 69px;
+  }
+
+  @media (max-width: ($tablet-width - 0.1)) {
+    padding-bottom: 23px;
+  }
+}
+
+.welcome__wrap {
+  display: flex;
+  column-gap: 126px;
+
+  @media (max-width: $desktop-width) {
+      column-gap: 53px;
+  }
+}
+
+.welcome__background-img,
+.welcome__text-wrap  {
+  flex-basis: 50%;
+}
+
+.welcome__background-img {
+  background-image: url('../img/bg/leafs.png');
+  background-repeat: no-repeat;
+
+
+  @media (max-width: $desktop-width) {
+    width: 280px;
+    height: 260px;
+    background-size: contain;
+    order: 2;
+  }
+
+  @media (max-width: ($tablet-width - 0.1)) {
+    display: none;
+  }
+}
+
+.welcome__text-wrap {
+  @media (max-width: $desktop-width) {
+    flex-basis: 58%;
+    order: 1;
+  }
+
+    @media (max-width: ($tablet-width - 0.1)) {
+    flex-basis: 100%;
+  }
+}
+
+.welcome__text-title {
+  margin-bottom: 44px;
+  padding-top: 39px;
+
+  font-weight: 700;
+  font-size: 2.85rem;
+  line-height: 50px;
+
+  @media (max-width: $desktop-width) {
+    padding-top: 0;
+    margin-bottom: 32px;
+    font-size: 2.1875rem;
+  }
+
+  @media (max-width: ($tablet-width - 0.1)) {
+    margin-bottom: 11px;
+    font-size: 1.5625rem;
+    line-height: 35px;
+  }
+}
+
+.welcome__text-title span {
+  color: $basic_green
+}
+
+.welcome__text-desc {
+  margin-bottom: 44px;
+  font-size: 1.25rem;
+  line-height: 35px;
+
+  @media (max-width: $desktop-width) {
+    margin-bottom: 32px;
+    font-size: 1rem;
+    line-height: 25px;
+  }
+
+  @media (max-width: ($tablet-width - 0.1)) {
+    margin-bottom: 27px;
+  }
+}

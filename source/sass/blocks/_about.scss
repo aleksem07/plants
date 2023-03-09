@@ -1,0 +1,101 @@
+.about {
+  margin-bottom: 100px;
+
+  @media (max-width: ($tablet-width - 0.1)) {
+    margin-bottom: 28px;
+  }
+}
+
+.about__container {
+  display: flex;
+
+  @media (max-width: $desktop-width) {
+    flex-direction: column;
+  }
+
+
+}
+
+.about__text-wrap,
+.about__background-img {
+  flex-basis: 50%;
+
+  @media (max-width: $desktop-width) {
+    flex-basis: 250px;
+  }
+
+  @media (max-width: ($tablet-width - 0.1)) {
+    flex-basis: 154px;
+  }
+}
+
+.about__text-wrap {
+  margin-top: 73px;
+
+  @media (max-width: $desktop-width) {
+    margin-top: 42px;
+  }
+
+  @media (max-width: ($tablet-width - 0.1)) {
+    margin-top: 32px;
+  }
+}
+
+.about__background-img {
+  width: 464px;
+  height: 479px;
+  background-image: url('../img/bg/houseplant.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+
+  @media (max-width: $desktop-width) {
+    margin: 0 auto;
+    width: 250px;
+    height: 250px;
+  }
+
+  @media (max-width: ($tablet-width - 0.1)) {
+    width: 150px;
+    height: 147px;
+    align-self: flex-start;
+  }
+}
+
+.about__title {
+  margin-bottom: 39px;
+
+  @media (max-width: $desktop-width) {
+    margin-bottom: 49px;
+    font-size: 2.1875rem;
+    line-height: 45.6px;
+    text-align: center;
+  }
+
+  @media (max-width: ($tablet-width - 0.1)) {
+    margin-bottom: 14px;
+    font-size: 1.5625rem;
+    line-height: 32.5px;
+  }
+}
+
+.about__title span {
+  color: $basic_orange;
+}
+
+.about__desc {
+  font-size: 1.25rem;
+  line-height: 30px;
+
+  @media (max-width: $desktop-width) {
+    margin-bottom: 69px;
+  }
+
+  @media (max-width: ($tablet-width - 0.1)) {
+    margin-block: 0;
+
+
+    font-size: 0.9375rem;
+    line-height: 25px;
+  }
+}
